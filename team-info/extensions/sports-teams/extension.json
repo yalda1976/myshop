@@ -1,0 +1,10 @@
+{
+  "name": "Sports Teams",
+  "type": "theme_app_extension",
+  "blocks": [
+    {
+      "name": "Sports Teams",
+      "type": "sports-teams"
+    }
+  ]
+}

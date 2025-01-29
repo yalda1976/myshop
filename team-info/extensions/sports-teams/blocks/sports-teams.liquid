@@ -1,0 +1,25 @@
+{% if product.metafields.custom.sports_teams != blank %}
+<div class="sports-teams">
+  <h3>Sports Team:</h3>
+  <ul>
+    {% for team in product.metafields.custom.sports_teams.value %}
+    <li>
+      <a href="{{ team.url }}" target="_blank" style="text-decoration: none;">
+        <img src="{{ team.image }}" alt="{{ team.name }}" width="100" height="auto" style="max-width: 100px; display: block;">
+        <p>{{ team.name }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+<p>No teams associated with this product.</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Sports Teams",
+  "target": "section",
+  "settings": []
+}
+{% endschema %}
